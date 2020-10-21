@@ -1,0 +1,1 @@
+web: gunicorn laba.wsgi --log-file -
