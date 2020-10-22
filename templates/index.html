@@ -1,11 +1,11 @@
-{% extends "base_generic.html" %}
+{% extends "base/base_generic.html" %}
 
 {% block title %}Новости{% endblock %}
 {% block content %}
 <h2>Список новостей</h2>
     <ul>
         {% for new in news %}
-            <li> <a href="./{{ new.id}}" >{{ new }}</a></li>
+            <li> <a href="./{{ new.url}}" >{{ new }}</a></li>
         {% endfor %}
     </ul>
 {% endblock %}

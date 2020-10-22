@@ -11,9 +11,9 @@ def index(request):
     return render(request, 'index.html', context)
 
 
-def getNews(request, pk):
-    currentNews = News.objects.get(pk=pk)
+def get_news(request, url):
+    currentNews = News.objects.get(url=url)
     context = {
         'news': currentNews,
     }
-    return render(request, 'content.html', context)
+    return render(request, 'news/content.html', context)
