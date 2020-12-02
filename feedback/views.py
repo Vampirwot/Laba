@@ -30,4 +30,4 @@ def create_feedback(request):
             print("Error")
     else:
         form = FeedbackForm()
-    return render(request, 'feedback\\feedback.html', {'form': form})
+    return render(request, 'feedback/feedback.html', {'form': form})
