@@ -2,7 +2,6 @@
 
 {% block title %}Новости{% endblock %}
 {% block content %}
-<h2>Список новостей</h2>
     <ul>
         {% for new in news %}
             <li> <a href="./{{ new.url}}" >{{ new }}</a></li>

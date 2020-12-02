@@ -1,5 +1,7 @@
+from django.http import Http404
 from django.shortcuts import render
 from news.models import News
+from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
@@ -12,7 +14,7 @@ def index(request):
 
 
 def get_news(request, url):
-    currentNews = News.objects.get(url=url)
+    currentNews = get_object_or_404(News, url=url)
     context = {
         'news': currentNews,
     }
